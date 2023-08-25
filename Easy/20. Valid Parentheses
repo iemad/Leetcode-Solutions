@@ -1,0 +1,15 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        a_stack = []
+        a_dict = { ")" : "(", "}" : "{", "]" : "[" }
+
+        for item in s:
+            if item in a_dict:
+                if a_stack and a_stack[-1] == a_dict[item]:
+                    a_stack.pop()
+                else:
+                    return False
+            else:
+                a_stack.append(item)
+
+        return False if a_stack else True
