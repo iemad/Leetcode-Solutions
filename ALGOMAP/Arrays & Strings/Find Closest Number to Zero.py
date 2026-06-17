@@ -1,4 +1,4 @@
-## Solution 1:
+# Solution 1:
 class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
         closest = nums[0]
@@ -10,7 +10,7 @@ class Solution:
                     closest = num
         return closest
 
-Solution 2:
+# Solution 2:
 class Solution:
     def findClosestNumber(self, nums: List[int]) -> int:
         return min(nums, key=lambda x: (abs(x), -x))
